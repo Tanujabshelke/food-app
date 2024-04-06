@@ -1,0 +1,7 @@
+.serach-container{
+    display: flex;
+}
+
+.search-bar {
+    margin-left: 5px;
+}

@@ -1,0 +1,100 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    border : 1px solid #888888;
+    padding: 10px;    
+}
+
+.sub-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #DDD;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+.card {
+    display: block;
+    padding: 15px;
+    border: 1px solid #f9f9f9;
+    border-radius: 15px;
+    width: 250px;
+    cursor: pointer;
+    background-color: #fff;
+    margin: 8px;
+}
+.card >p {
+    word-wrap: break-word;
+}
+.card:hover{
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.resto-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.resto-name{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.shimmer-card{
+    display: block;
+    padding: 15px;
+    border: 1px solid #f9f9f9;
+    border-radius: 15px;
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    background-color: #fff;
+    margin: 8px;
+}
+
+.restoMenu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    margin-inline: 20px;
+    box-shadow:rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; ;
+}
+
+.menu-descn h4 {
+    font-weight:bold;
+}
+.menu-descn p{
+  font-weight: lighter;
+  font-size: medium;
+  color: #908a8a;
+  font-family:Arial, Helvetica, sans-serif;
+  line-height: 20px;
+}
+
+.menu-price{
+    color: #3d3b3b;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu-img{
+    padding-left: 10px;
+    height: 100px;
+}
