@@ -13,13 +13,17 @@ const RestoMenu = (props) => {
     if(resInfo === null){
       return <ShimmerEffect />
     }
-    
-    const menu = resInfo.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards || [];
-    const {name ,cuisines,costForTwoMessage } = resInfo.cards[0]?.card?.card?.info;
-console.log("menu",resInfo);
+
+    const _menuCard = resInfo.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+    const _menu = _menuCard.filter(data => data?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory" );
+    console.log(resInfo)
   return (
-    <div className="restoMenu-container">
-      <h1>{name} </h1>
+    <div className="w-4/12 flex flex-col item-center m-auto ">
+      <span className="font-bold text-xl my-5">{resInfo?.cards[2]?.card?.card?.info?.name}</span>
+      {_menu.length && _menu.map(category =>{
+         return <Menu data={category}/>
+      })}
+      {/* <h1>{name} </h1>
       <h2>Menu</h2>
       <h3>cuisines - {cuisines.join(",")}</h3>
       <p>{costForTwoMessage}</p>
@@ -32,7 +36,7 @@ console.log("menu",resInfo);
             </li>
           );
         })}
-      </ul>
+      </ul> */}
     </div>
   );
 };
