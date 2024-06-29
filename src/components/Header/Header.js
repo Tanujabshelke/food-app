@@ -16,7 +16,6 @@ function Header() {
   useEffect(()=>{
     console.log("useEffect called");
   },[isLogin]);
-
   return (
     <div className='header'>
         <div className='logo-container'> 
